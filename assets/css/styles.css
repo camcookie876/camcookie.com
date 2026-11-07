@@ -1,0 +1,183 @@
+            body {
+                background: #0099ff;
+                margin: 0;
+                font-family: "Montserrat", Arial, sans-serif;
+            }
+            .topnav {
+                display: flex;
+                position: fixed;
+                width: 100%;
+                height: 100px;
+                align-items: center;
+                top: 0;
+                left: 0;
+                z-index: 9999;
+                transition: background 0.3s ease, border-bottom 0.3s ease;
+            }
+            .topnav svg {
+                height: 80px;
+                width: 80px;
+            }
+            .topnav h1 {
+                background: #008000;
+                color: #ffffff;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .topnav a {
+                color: #ffffff;
+                transition: 1s;
+                font-size: 22px;
+                font-weight: 800;
+                padding: 20px;
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+            .topnav a:hover {
+                background: #ffffff;
+                color: #008000;
+            }
+            .topnav a.active {
+                background: #ffffff;
+                color: #008000;
+            }
+            .topnav.scrolled {
+                background: #0099ff;
+                border-bottom: 5px solid #008000;
+            }
+            .topnav.scrolled svg {
+                fill: #2a6a9c;
+            }
+            .topnav.scrolled h1 {
+                color: #ffffff;
+            }
+            .topnav.scrolled a {
+                color: #008000;
+            }
+            .topnav.scrolled a:hover {
+                background: #008000;
+                color: #ffffff;
+            }
+            .topnav.scrolled a.active {
+                background: #008000;
+                color: #ffffff;
+            }
+            .home-hero {
+                width: calc(100% - 40px);
+                height: 100vh;
+                padding-left: 20px;
+                padding-right: 20px;
+
+                color: #ffffff;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                background-image:
+                    linear-gradient(rgba(0, 80, 200, 0.5), rgba(0, 80, 200, 0.4)),
+                    url("https://dn721309.ca.archive.org/0/items/theoriginalfilesofsomewindowswallpapers/bliss%20600dpi.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+            }
+            .home-hero .toptitle {
+                opacity: 0;
+                animation: fromBottom 1s ease-in-out 0s forwards;
+            }
+            .home-hero .toptitle h1{
+                font-size: 40px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .home-hero .title {
+                display: flex;
+
+                animation: fromLeft 2s ease-in-out 0s forwards;
+                opacity: 0;
+            }
+            .home-hero .title h1 {
+                font-size: 80px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .home-hero .hcontent {
+                margin-top: 10px;
+                opacity: 0;
+                animation: fadeIn 1s ease-in-out 2s forwards;
+            }
+            .home-hero .hcontent a {
+                padding: 15px;
+                background: #008000;
+                border-radius: 10px;
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: 700;
+                transition: 1s;
+                margin: 10px;
+            }
+            .home-hero .hcontent a:hover {
+                background: #006400;
+            }
+            .hero {
+                width: 100%;
+                height: 350px;
+                position: relative;
+
+                background-image: linear-gradient(rgba(0, 80, 200, 0.5), rgba(0, 80, 200, 0.4)), url("https://dn721309.ca.archive.org/0/items/theoriginalfilesofsomewindowswallpapers/bliss%20600dpi.jpg");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
+            }
+            .hero .title {
+                background: rgba(0, 128, 0, 0.85);
+                color: #ffffff;
+                width: 100%;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                justify-content: center;
+            }
+            .hero .title h1 {
+                font-size: 50px;
+                padding: 15px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .content {
+                padding-left: 90px;
+                padding-right: 90px;
+                padding-top: 60px;
+                background: #ffffff;
+            }
+            .content > :last-child {
+                margin-bottom: 0;
+                padding-top: 0;
+            }
+            .content h1 {
+                color: #000000;
+            }
+            .content p {
+                text-decoration: normal;
+            }
+            .content p.s {
+                color: #0099ff;
+                margin: 0;
+                font-size: 12px;
+                font-weight: 800;
+            }
+            .footer {
+                background: #008000;
+                width: 100%;
+                margin-top: 0;
+                padding-top: 5px;
+            }
+            /*ANIMATION*/
+            @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+            @keyframes fromLeft { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+            @keyframes fromBottom { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
